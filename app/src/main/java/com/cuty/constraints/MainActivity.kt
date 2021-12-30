@@ -1,8 +1,10 @@
 package com.cuty.constraints
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
@@ -13,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         addAnimationOperations()
+        setNextButton()
     }
     private fun addAnimationOperations() {
         val constraintLayoutRoot = findViewById<ConstraintLayout>(R.id.root)
@@ -31,5 +34,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    }
+    private fun setNextButton(){
+        val nextButton = findViewById<Button>(R.id.bu_next)
+        nextButton.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
