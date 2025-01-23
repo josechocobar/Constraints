@@ -21,4 +21,4 @@ CMD ["--server.port=8080"]
 
 
 # comando para ejecutar el jar
-#docker run -d -p 8080:8080 nombre_imagen
+#docker run -d -p 8080:8080 --name proyecto-dragon nombre_imagen
